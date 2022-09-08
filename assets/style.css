@@ -1,0 +1,12 @@
+#intro p{
+    display: inline;
+}
+
+#stop{
+    color: red;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#searchButton{
+    margin-top: 3%;
+}
