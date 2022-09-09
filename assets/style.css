@@ -19,3 +19,26 @@ li {
     text-decoration: none;
   }
   
+  #weather {
+    border: 2px black solid;
+    padding: 5px;
+    height: 200px;
+  }
+
+  #gas {
+    border: 2px red solid;
+    padding: 5px;
+    height: 200px;
+  }
+
+  #fourDay {
+    border: 2px black dashed;
+    padding: 5px;
+    margin-top:10px;
+    height: 200px;
+    text-align: center;
+  }
+  
+  #moreInfo {
+    float: right;
+  }
