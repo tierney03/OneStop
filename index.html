@@ -30,22 +30,50 @@
                     <input class="u-full-width"type="email" placeholder="Enter city" id="cityInput">
                 </div>
                 <div class="three columns"  id="searchButton">
-                    <input class="button-primary" type="submit" value="Search city">
+                    <input id="searchBtn" class="button-primary" type="submit" value="Search city">
                 </div>
 
             </div>
-                <div class="row">
-                    <div class="one-half column" id="weather">Weather
-                        <div id="moreInfo">More Info</div>
+                <div class="row" id="currentCityBox">
+                    <div class="one-half column category" id="weather" >Weather
+                        <img class="u-max-full-width" id="gasPhoto" src="./Images/field-stock.jpg">
+                        <!-- <div id="moreInfo">More Info</div> -->
                     </div>
-                    <div class="one-half column" id="gas">Average Gas $</div>
+                    <div class="one-half column" id="gas">Average Gas $
+                        <img class="u-max-full-width" id="weatherPhoto" src="./Images/gas-stock.jpg">
+                    </div>
                 </div>
-            <div class="row">
+                <!-- future input for good local spots. restraunts,hotels maybe add other cool local things  -->
+                <!-- <div class="row">
+                    <div class="twelve columns">
+
+                    </div>
+                </div> -->
+            <div class="row" id="fourDayBox">
                 <div class="twelve columns" id="fourDay">
-                    <div class="three columns" id="day1">Day 1</div>
-                    <div class="three columns" id="day2">Day 2</div>
-                    <div class="three columns" id="day3">Day 3</div>
-                    <div class="three columns" id="day4">Day 4</div>
+                    <div class="three columns" id="day1">
+                        <h5>Tomorrow</h5>
+                        <p>Temp:</p>
+                        <p>Chance of rain:</p>
+                    </div>
+                    <div class="three columns" id="day2">
+                        <h5>Tomorrow</h5>
+                        <p>Temp:</p>
+                        <p>Chance of rain:</p>
+
+                    </div>
+                    <div class="three columns" id="day3">
+                        <h5>Tomorrow</h5>
+                        <p>Temp:</p>
+                        <p>Chance of rain:</p>
+
+                    </div>
+                    <div class="three columns" id="day4">
+                        <h5>Tomorrow</h5>
+                        <p>Temp:</p>
+                        <p>Chance of rain:</p>
+
+                    </div>
                 </div>
         </div>
 

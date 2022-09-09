@@ -22,28 +22,3 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=memphis&appid=104b3d87a
     .then((response) => response.json())
     .then((data) => console.log(data));
 
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': 'e606b04688msh0716254553daac3p1ce234jsn480b7db502d8',
-// 		'X-RapidAPI-Host': 'gas-price.p.rapidapi.com'
-// 	}
-// };
-
-// fetch('https://gas-price.p.rapidapi.com/allUsaPrice', options)
-// 	.then(response => response.json())
-// 	.then(response => console.log(response))
-// 	.catch(err => console.error(err));
-
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'e606b04688msh0716254553daac3p1ce234jsn480b7db502d8',
-		'X-RapidAPI-Host': 'gas-price.p.rapidapi.com'
-	}
-};
-
-fetch('https://gas-price.p.rapidapi.com/stateUsaPrice?state=TN', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
