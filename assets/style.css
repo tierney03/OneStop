@@ -6,6 +6,7 @@
 
 body{
   background-color: var(--main2);
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
 #intro p{
@@ -78,4 +79,13 @@ li {
     float: right;
   }
 
-  
+  #aboutUs2, #comingFeatures2, #info2, #resources2 {
+    border: 2px solid black;
+    border-radius: 3px;
+    height: 200px;
+    padding: 5px;
+    margin-top: 5px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: bold;
+    background-color: white;
+  }
