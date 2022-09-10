@@ -1,3 +1,13 @@
+:root{
+  --main1:rgb(0,191,255);
+  --main2:rgb(192,192,192); 
+  --main3:rgb(255,0,0);
+}
+
+body{
+  background-color: var(--main2);
+}
+
 #intro p{
     display: inline;
 }
@@ -18,27 +28,54 @@ li {
     padding: 0px 20px;
     text-decoration: none;
   }
-  
-  #weather {
-    border: 2px black solid;
-    padding: 5px;
-    height: 200px;
+
+  /* #currentCityBox{
+
+  } */
+
+  #weatherPhoto{
+    border-radius: 5px;
   }
 
-  #gas {
-    border: 2px red solid;
-    padding: 5px;
-    height: 200px;
+  #gasPhoto{
+    border-radius: 5px;
+  }
+  .u-max-full-width {
+    max-width: 100%;
+    box-sizing: border-box; 
   }
 
   #fourDay {
-    border: 2px black dashed;
-    padding: 5px;
     margin-top:10px;
     height: 200px;
-    text-align: center;
+  }
+
+  #day1{
+    border: 2px black solid;
+    border-radius: 7px;
+    background-color: var(--main1);
+  }
+  
+  #day2{
+    border: 2px black solid;
+    border-radius: 7px;
+    background-color: var(--main1);
+  }
+
+  #day3{
+    border: 2px black solid;
+    border-radius: 7px;
+    background-color: var(--main1);
+  }
+
+  #day4{
+    border: 2px black solid;
+    border-radius: 7px;
+    background-color: var(--main1);
   }
   
   #moreInfo {
     float: right;
   }
+
+  
