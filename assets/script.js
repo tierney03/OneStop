@@ -41,8 +41,8 @@ function saveCity(){
     currentTemp = Math.trunc(currentTemp)
     currentHum = Math.trunc(currentHum)
 
-    $('#curTemp').text(currentTemp);
-    $('#curHum').text(currentHum)
+    $('#curTemp').text((currentTemp) + “°F”);
+    $('#curHum').text((currentHum) + “ %”);
 
     state = $('#stateSelect').val()
     console.log(state)
