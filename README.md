@@ -8,9 +8,13 @@
 <p>User is presented with a input HTML element and drop down selector, after the search button is clicked the javascript function with begin to run. The function will pull the input data and save them to the local stoage after being set to pre declaired variable, putting the user input into the API's to pull the current and future weather, the average gas price. Soon coming feature is to also see local hotels and restraunts.</p>
 
 ## Webpage
-<img src = "./Images/page1.png" height=150px width=150px>
-<img src = "./Images/page2.png" height=150px width=150px>
-[Link to active page](https://tierney03.github.io/OneStop/)
+
+![OneStop home page](./Images/page1.PNG)
+![Second page](./Images/page2.PNG)
+
+## URL for website
+
+[Link to active page!](https://tierney03.github.io/OneStop/)
 
 ## Resources
 [w3schools](https://www.w3schools.com/)<br>
