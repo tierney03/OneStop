@@ -18,7 +18,25 @@ const day4El = document.getElementById("#day4");
 var pastCity = []
 var city = ""
 
-fetch('https://api.openweathermap.org/data/2.5/weather?q=memphis&appid=104b3d87a3f27b63c86227e77149ab4c')
-    .then((response) => response.json())
-    .then((data) => console.log(data));
+var pastCity = []
+var city = ""
+var key = "104b3d87a3f27b63c86227e77149ab4c"
 
+
+function saveCity(){
+    
+    city = $("#cityInput").val().trim()
+    pastCity.push(city)
+    searchedList = $(`<li class="list-group-item list-group-item-secondary" id="work">${city.toUpperCase()}</li>`);
+    $("#search-history").append(searchedList);
+    localStorage.setItem("pastCity",JSON.stringify(pastCity))
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`)
+    .then((response) => response.json())
+    .then((data) => {console.log(data)
+
+    currentTemp = data['main']['temp']
+ });
+}
+
+$("#searchBtn").on("click",saveCity)
