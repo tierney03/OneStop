@@ -41,8 +41,8 @@ function saveCity(){
     currentTemp = Math.trunc(currentTemp)
     currentHum = Math.trunc(currentHum)
 
-    $('#curTemp').text((currentTemp) + “°F”);
-    $('#curHum').text((currentHum) + “ %”);
+    $('#curTemp').text((currentTemp) + '°F');
+    $('#curHum').text((currentHum) + '%');
 
     state = $('#stateSelect').val()
     console.log(state)
@@ -55,7 +55,7 @@ var data = null;
 var xhr = new XMLHttpRequest();
 xhr.withCredentials = false;
 
-xhr.addEventListener("readystatechange", function () {
+xhr.addEventListener('readystatechange', function () {
   if (this.readyState === this.DONE) {
     console.log(this.responseText);
   }
