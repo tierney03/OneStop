@@ -1,12 +1,12 @@
 :root{
   --main1:rgb(0,191,255);
-  --main2:rgb(221, 218, 218); 
+  --main2: rgb(221, 218, 218); 
   --main3:rgb(255,0,0);
 }
 
 body{
   background-color: var(--main2);
-  font-family: "Lucida Console", "Courier New", monospace;
+  font-family: 'Poppins';font-size: 22px;
 }
 
 #intro p{
@@ -26,7 +26,6 @@ li {
     display: inline;
     padding: 0px 20px;
     text-decoration: none;
-    font-family: "Lucida Console", "Courier New", monospace;
   }
 
   h4 {
@@ -34,35 +33,38 @@ li {
   }
 
   #weather, #gas {
-    font-family: "Lucida Console", "Courier New", monospace;
     font-weight: bold;
     font-size: 15px;
-    margin-top: 1rem;
+    margin-top: 1em;
   }
 
   #weatherPhoto{
     border-radius: 5px;
+    opacity: 60%;
   }
 
   #gasPhoto{
     border-radius: 5px;
+    opacity: 60%;
   }
+
   .u-max-full-width {
     max-width: 100%;
     box-sizing: border-box; 
+    
   }
 
   #fourDay {
-    font-family: "Lucida Console", "Courier New", monospace;
     margin-top:10px;
     height: 200px;
   }
 
   #day1, #day2, #day3, #day4 {
-    border: 2px black solid;
+    border: black solid 2px;
     border-radius: 7px;
     background-color: var(--main1);
-    padding: 1rem;
+    padding: 4px;
+    overflow: auto;
   }
   
   #moreInfo {
@@ -70,20 +72,20 @@ li {
   }
 
   #aboutUs2, #comingFeatures2, #info2, #resources2 {
-    border: 2px solid black;
-    border-radius: 3px;
+    border: black solid 2px;
+    background-color: var(--main1);
+    border-radius: 7px;
     height: 200px;
-    padding: 5px;
+    padding: 10px;
     margin-top: 5px;
-    font-family: "Lucida Console", "Courier New", monospace;
-    font-weight: bold;
-    background-color: white;
-  }
-
-  #resources2 {
-    height: 300px;
+    overflow: auto;
   }
 
   #list {
     display: block;
+  }
+
+  a {
+    color: white;
+  
   }
