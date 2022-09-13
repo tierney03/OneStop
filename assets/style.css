@@ -85,9 +85,15 @@ li {
     display: block;
   }
 
-  a {
-    color: white;
   
+.top-right {
+  position: absolute;
+  top: 50%;
+  right: 90%;
+  text-decoration-thickness: 5px;
+ Text-decoration-color: white;
+ font-size: 40px;
+}
 
 /* -------------- Hover Effects ---------------- */
   #aboutUs:hover, #comingFeatures:hover, #info:hover, #resources:hover, #home:hover {
