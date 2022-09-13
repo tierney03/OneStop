@@ -88,4 +88,22 @@ li {
   a {
     color: white;
   
+
+/* -------------- Hover Effects ---------------- */
+  #aboutUs:hover, #comingFeatures:hover, #info:hover, #resources:hover, #home:hover {
+    color: var(--main3);
+    
+  }
+
+  #searchBtn {
+    
+    box-shadow: inset 0 0 0 0 var(--main3);
+    transition: ease-out .4s;
+  }
+
+  #searchBtn:hover {
+    box-shadow: inset 300px 0 0 0 var(--main3);
+    color: whitesmoke;
+    border: 2px solid var(--main3);
+
   }
