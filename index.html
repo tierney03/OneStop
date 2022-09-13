@@ -25,23 +25,41 @@
                 </div>
             </div>
             <div class="row">
-                <div class="nine columns">
+                <div class="six columns">
                     <!-- <label for="searchHead">Search city</label> -->
                     <input class="u-full-width"type="email" placeholder="Enter city" id="cityInput">
                 </div>
+                <!--added in the dropdown selector for user input state-->
+                <div class="three columns">
+                    <select class="u-full-width" id="stateSelect">
+                      <option value="AL">AL</option>
+                      <option value="AK">AK</option>
+                      <option value="AZ">AZ</option>
+                      <option value="TN">TN</option>
+                    </select>
+                  </div>
                 <div class="three columns"  id="searchButton">
-                    <input id="searchBtn" class="button-primary" type="submit" value="Search">
+                    <button id="searchBtn" class="button-primary" type="submit" value="Search">Search city</button>
+                </div>
+                <div class="twelve columns">
+                    <!--spot for the search history to populate-->
+                    <ul id="search-history">
+
+                    </ul>
                 </div>
 
             </div>
                 <div class="row" id="currentCityBox">
                     <div class="one-half column category" id="weather"> 
                             <h4>Weather</h4>
+                            <!--work on population after click changes look of page-->
+                            <p id="curTemp"></p>
+                            <p id="curHum"></p>
                         <img class="u-max-full-width" id="gasPhoto" src="./Images/field-stock.jpg">
                         <!-- <div id="moreInfo">More Info</div> -->
                     </div>
                     <div class="one-half column" id="gas"> 
-                            <h4>Average Gas $</h4>
+                            <h4>Average Gas $:<span id="curPrice"></span></h4>
                         <img class="u-max-full-width" id="weatherPhoto" src="./Images/gas-stock.jpg">
                     </div>
                 </div>
@@ -80,5 +98,6 @@
         </div>
 
         <script src="assets/script.js" async defer></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     </body>
 </html>

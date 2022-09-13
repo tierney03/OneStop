@@ -18,10 +18,6 @@ body{
     font-family: "Lucida Console", "Courier New", monospace;
 }
 
-/* #searchButton{
-    margin-top: 3%;
-} */
-
 .text-right {
     text-align: right;
   }
@@ -32,10 +28,6 @@ li {
     text-decoration: none;
     font-family: "Lucida Console", "Courier New", monospace;
   }
-
-  /* #currentCityBox{
-
-  } */
 
   h4 {
     padding-bottom: 1px;
