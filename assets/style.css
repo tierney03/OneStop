@@ -88,11 +88,18 @@ li {
   
 .top-right {
   position: absolute;
-  top: 50%;
-  right: 90%;
-  text-decoration-thickness: 5px;
- Text-decoration-color: white;
- font-size: 40px;
+  top: 45%;
+  right: 75%;
+  color: white;
+  font-size: 25px;
+}
+
+.top-left {
+  position: absolute;
+  top: 45%;
+  left: 75%;
+  color: white;
+  font-size: 30px;
 }
 
 /* -------------- Hover Effects ---------------- */
