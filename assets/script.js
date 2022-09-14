@@ -3,6 +3,11 @@ var pastCity = []
 var city = ""
 var key = "104b3d87a3f27b63c86227e77149ab4c"
 
+stateOptions = [ 'AL', 'AK', 'AS', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FM', 'FL', 'GA', 'GU', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MH', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'MP', 'OH', 'OK', 'OR', 'PW', 'PA', 'PR', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VI', 'VA', 'WA', 'WV', 'WI', 'WY' ];
+     for (var i = 0; i < stateOptions.length; i++ ) {
+     $('<option/>').val(stateOptions[i]).html(stateOptions[i]).appendTo('#stateSelect');
+     }
+
 //saves the user input for city and state to localStorage, displays the temp and hum for now, add in forecast api to pull future data
 function saveCity(){
     
@@ -27,8 +32,8 @@ function saveCity(){
     $('#curHum').text('Humidity: ' +(currentHum) + '%');
 
    
-});
-}
+  });
+ }
 
 function setState(){ 
 state = $('#stateSelect').val()
@@ -48,6 +53,17 @@ xhr.addEventListener('readystatechange', function () {
     responseText = JSON.parse(responseText);
     console.log(responseText)
     
+    gasPrice = responseText['result']['state']['gasoline']
+    midGrade = responseText['result']['state']['midGrade']
+    premium = responseText['result']['state']['premium']
+    diesel = responseText['result']['state']['diesel']
+
+    console.log(gasPrice)
+    console.log(midGrade)
+    console.log(premium)
+    console.log(diesel)
+
+    $('#curPrice').text(gasPrice)
   }
 });
 
