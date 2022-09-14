@@ -23,8 +23,8 @@ function saveCity(){
     currentTemp = Math.trunc(currentTemp)
     currentHum = Math.trunc(currentHum)
 
-    $('#curTemp').text((currentTemp) + '°F');
-    $('#curHum').text((currentHum) + '%');
+    $('#curTemp').text('Temp: ' + (currentTemp) + '°F');
+    $('#curHum').text('Humidity: ' +(currentHum) + '%');
 
    
 });
