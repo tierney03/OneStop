@@ -126,7 +126,7 @@ li {
   }
 
   /* -------------- Responsive ---------------- */
-
+/* 
   @media (max-width: 420px) { 
     body{
       background-color: var(--main2);
@@ -145,31 +145,31 @@ li {
       right: 39%;
       color: white;
       font-size: 7vw;
-    }
+    } */
 
-    .top-left {
-      /* position: absolute; */
+    /* .top-left {
+      position: absolute;
       top: 62%;
       left: 68%;
       color: white;
       font-size: 8vw;
-    }
+    } */
     
-    .respoPage2 {
+    /* .respoPage2 {
       display:inline;
       text-decoration: none;
-      /* font-size: 1vw; */
-    }
+      font-size: 1vw;
+    } */
 
     /* #aboutUs2, #comingFeatures2, #info2, #resources2 {
     border: black solid 2px;
     background-color: var(--main1);
     border-radius: 7px;
     height: 200px;
-    /* padding: 0px; */
+    padding: 0px; */
     /* margin-top: 5px; 
     overflow: auto;
-  } */
+  }
     
   } 
 
@@ -195,7 +195,7 @@ li {
 
     .top-left {
       /* position: absolute; */
-      top: 65%;
+      /* top: 65%;
       left: 75%;
       color: white;
       font-size: 6vw;
@@ -218,13 +218,13 @@ li {
       font-size: 3vw;
     }
 
-    .top-left {
+    .top-left { */
       /* position: absolute; */
-      top: 45%;
+      /* top: 45%;
       left: 80%;
       color: white;
       font-size: 5vw;
     }
     
 
-  }
+  } */
