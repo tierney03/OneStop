@@ -10,7 +10,7 @@ stateOptions = [ 'AL', 'AK', 'AS', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FM
 
 //saves the user input for city and state to localStorage, displays the temp and hum for now, add in forecast api to pull future data
 function saveCity(){
-    
+  
     city = $("#cityInput").val().trim()
     pastCity.push(city)
     searchedList = $(`<li class="list-group-item list-group-item-secondary" id="work">${city.toUpperCase()}</li>`);
@@ -23,16 +23,27 @@ function saveCity(){
 
     currentTemp = data['main']['temp']
     currentHum = data['main']['humidity']
+    dayHum = data['main']['humidity']
+    dayMax = data['main']['temp_max']
+    dayMin = data['main']['temp_min']
+   
 
     currentTemp = ((currentTemp-273.15)*1.7)+32;
-    currentTemp = Math.trunc(currentTemp)
-    currentHum = Math.trunc(currentHum)
+    dayMin = ((dayMin-273.15)*1.7)+32;
+    dayMax = ((dayMax-273.15)*1.7)+32;
+    dayMin = Math.trunc(dayMin);
+    dayMax = Math.trunc(dayMax);
+    currentTemp = Math.trunc(currentTemp);
+    currentHum = Math.trunc(currentHum);
+    
 
+    
     $('#curTemp').text('Temp: ' + (currentTemp) + '°F');
     $('#curHum').text('Humidity: ' +(currentHum) + '%');
-
-   
-  });
+    $('#dayHum').text('Humidity: ' + (dayHum) + '%');
+    $('#dayMin').text('Min Temp:  ' + (dayMin) + '°F');
+    $('#dayMax').text('Max Temp:  ' + (dayMax) + '°F');
+  }); 
  }
 
 function setState(){ 
@@ -63,7 +74,9 @@ xhr.addEventListener('readystatechange', function () {
     console.log(premium)
     console.log(diesel)
 
-    $('#curPrice').text(gasPrice)
+    
+
+    $('#curPrice').text('State Avg:$' + (gasPrice));
   }
 });
 

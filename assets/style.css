@@ -37,6 +37,7 @@ li {
     font-size: 15px;
     margin-top: 1em;
   }
+ 
 
   #weatherPhoto{
     border-radius: 5px;
@@ -59,7 +60,7 @@ li {
     height: 200px;
   }
 
-  #day1, #day2, #day3, #day4 {
+  #day-1, #day-2, #day-3, #day-4 {
     border: black solid 2px;
     border-radius: 7px;
     background-color: var(--main1);
@@ -89,15 +90,17 @@ li {
 .top-right {
   position: absolute;
   top: 45%;
+  bottom: 35%;
   right: 75%;
   color: white;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .top-left {
   position: absolute;
   top: 45%;
-  left: 75%;
+  bottom: 25%;
+  left: 65%;
   color: white;
   font-size: 30px;
 }
