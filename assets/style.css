@@ -6,7 +6,8 @@
 
 body{
   background-color: var(--main2);
-  font-family: 'Poppins';font-size: 22px;
+  font-family: 'Poppins';
+  /* font-size: 22px; */
 }
 
 #intro p{
@@ -34,7 +35,7 @@ li {
 
   #weather, #gas {
     font-weight: bold;
-    font-size: 15px;
+    /* font-size: 15px; */
     margin-top: 1em;
   }
 
@@ -118,5 +119,109 @@ li {
     box-shadow: inset 300px 0 0 0 var(--main3);
     color: whitesmoke;
     border: 2px solid var(--main3);
+
+  }
+
+  /* -------------- Responsive ---------------- */
+
+  @media (max-width: 420px) { 
+    body{
+      background-color: var(--main2);
+      font-family: 'Poppins';
+    }
+    li {
+      display:inline;
+      padding: 0px 20px;
+      text-decoration: none;
+      font-size: 2vw;
+    }
+
+    .top-right {
+      position: absolute;
+      top: 36%;
+      right: 39%;
+      color: white;
+      font-size: 7vw;
+    }
+
+    .top-left {
+      /* position: absolute; */
+      top: 62%;
+      left: 68%;
+      color: white;
+      font-size: 8vw;
+    }
+    
+    .respoPage2 {
+      display:inline;
+      text-decoration: none;
+      /* font-size: 1vw; */
+    }
+
+    /* #aboutUs2, #comingFeatures2, #info2, #resources2 {
+    border: black solid 2px;
+    background-color: var(--main1);
+    border-radius: 7px;
+    height: 200px;
+    /* padding: 0px; */
+    /* margin-top: 5px; 
+    overflow: auto;
+  } */
+    
+  } 
+
+  @media (min-width: 640px) { 
+    body{
+      background-color: var(--main2);
+      font-family: 'Poppins';
+    }
+    li {
+      display:inline-table;
+      padding: 0px 20px;
+      text-decoration: none;
+      font-size: 2vw;
+    }
+
+    .top-right {
+      position: absolute;
+      top: 25%;
+      right: 75%;
+      color: white;
+      font-size: 3vw;
+    }
+
+    .top-left {
+      /* position: absolute; */
+      top: 65%;
+      left: 75%;
+      color: white;
+      font-size: 6vw;
+    }
+    
+
+  }
+
+  @media (min-width: 764px) {
+    body{
+      background-color: var(--main2);
+      font-family: 'Poppins';
+    }
+
+    .top-right {
+      position: absolute;
+      top: 46%;
+      right: 71%;
+      color: white;
+      font-size: 3vw;
+    }
+
+    .top-left {
+      /* position: absolute; */
+      top: 45%;
+      left: 80%;
+      color: white;
+      font-size: 5vw;
+    }
+    
 
   }
