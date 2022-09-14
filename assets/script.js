@@ -8,14 +8,16 @@ stateOptions = [ 'AL', 'AK', 'AS', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FM
      $('<option/>').val(stateOptions[i]).html(stateOptions[i]).appendTo('#stateSelect');
      }
 
+
 //saves the user input for city and state to localStorage, displays the temp and hum for now, add in forecast api to pull future data
 function saveCity(){
   
-    city = $("#cityInput").val().trim()
-    pastCity.push(city)
-    searchedList = $(`<li class="list-group-item list-group-item-secondary" id="work">${city.toUpperCase()}</li>`);
-    $("#search-history").append(searchedList);
-    localStorage.setItem("pastCity",JSON.stringify(pastCity))
+  city = $("#cityInput").val().trim()
+  pastCity.push(city)
+  searchedList = $(`<li class="list-group-item list-group-item-secondary" id="work">${city.toUpperCase()}</li>`);
+  $("#search-history").append(searchedList);
+  localStorage.setItem("pastCity",JSON.stringify(pastCity))
+
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`)
     .then((response) => response.json())
@@ -23,16 +25,11 @@ function saveCity(){
 
     currentTemp = data['main']['temp']
     currentHum = data['main']['humidity']
-    dayHum = data['main']['humidity']
-    dayMax = data['main']['temp_max']
-    dayMin = data['main']['temp_min']
+    currentLat = data['coord']['lat']
+    currentLon = data['coord']['lon']
    
 
     currentTemp = ((currentTemp-273.15)*1.7)+32;
-    dayMin = ((dayMin-273.15)*1.7)+32;
-    dayMax = ((dayMax-273.15)*1.7)+32;
-    dayMin = Math.trunc(dayMin);
-    dayMax = Math.trunc(dayMax);
     currentTemp = Math.trunc(currentTemp);
     currentHum = Math.trunc(currentHum);
     
@@ -40,9 +37,32 @@ function saveCity(){
     
     $('#curTemp').text('Temp: ' + (currentTemp) + '°F');
     $('#curHum').text('Humidity: ' +(currentHum) + '%');
-    $('#dayHum').text('Humidity: ' + (dayHum) + '%');
-    $('#dayMin').text('Min Temp:  ' + (dayMin) + '°F');
-    $('#dayMax').text('Max Temp:  ' + (dayMax) + '°F');
+
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${currentLat}&lon=${currentLon}&appid=${key}&exclude=minutely,hourly`)
+    .then(response => response.json())
+    .then(data =>{ console.log(data)
+      var index = 0;
+// forecast function pulling next 5 days and display upcoming weather and 
+      for(let i = 6; i < 40; i+=7) {
+         var forecast = data.list[i]
+         var [date] = forecast.dt_txt.split(" ")
+         var futHum = forecast.main.humidity
+         var futMin = forecast.main.temp_min
+         var futMax = forecast.main.temp_max
+// convert the temp, remove decimal from wind and temp
+         futMin = ((futMin-273.15)*1.8)+32;
+         futMin = Math.trunc(futMin)
+
+         futMax = ((futMax-273.15)*1.8)+32;
+         futMax = Math.trunc(futMax)
+//displaying the future weather
+         $('#date'+index).text(date);
+         $('#dayMin'+index).text('Min:'+ " " + (futMin) + '°F');
+         $('#dayMax'+index).text('Max:'+ " " + (futMax) + '°F');
+         $('#dayHum'+index).text('hum:'+ " " + (futHum) + '%');
+         index++
+     }
+    })
   }); 
  }
 
@@ -76,7 +96,10 @@ xhr.addEventListener('readystatechange', function () {
 
     
 
-    $('#curPrice').text('State Avg:$' + (gasPrice));
+    $('#gasPrice').text('State Avg Gas:$' + (gasPrice));
+    $('#midPrice').text('State Avg Mid:$' + (midGrade));
+    $('#premiumPrice').text('State Avg Premium:$' + (premium));
+    $('#dieselPrice').text('State Avg Diesel:$' + (diesel));
   }
 });
 
@@ -87,14 +110,6 @@ xhr.setRequestHeader("authorization", "apikey 0k6jygK77f2YNTdDpR3Pe6:27QdslUJHym
 xhr.send(data);
 
 }
-
-
-//trying to run gas api as fetch, xhr request are outdated
-// fetch(`https://api.collectapi.com/gasPrice/stateUsaPrice?state=TN`)
-// .then((response) => response.json())
-// .then((data) => {console.log(data)
-// });
-
 
 $("#searchBtn").on("click",saveCity)
 $("#searchBtn").on("click",setState)
