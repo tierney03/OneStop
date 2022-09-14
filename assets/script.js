@@ -1,21 +1,3 @@
-// May delete if not needed
-// const introEl = document.getElementById("#intro");
-// const infoEl = document.getElementById("#info");
-// const comingFeatEl = document.getElementById("#comingFeatures");
-// const resourcesEl = document.getElementById("#resources");
-// const aboutUsEl = document.getElementById("#aboutUs");
-// const stopEl = document.getElementById("#stop");
-// const cityInputEl = document.getElementById("#cityInput");
-// const searchBtnEl = document.getElementById("#searchButton");
-// const moreInfoEl = document.getElementById("#moreInfo");
-// const weatherEl = document.getElementById("#weather");
-// const gasEl = document.getElementById("#gas");
-// const fourDayEl = document.getElementById("#fourDay");
-// const day1El = document.getElementById("#day1");
-// const day2El = document.getElementById("#day2");
-// const day3El = document.getElementById("#day3");
-// const day4El = document.getElementById("#day4");
-
 //making the variables for api look up
 var pastCity = []
 var city = ""
@@ -44,11 +26,15 @@ function saveCity(){
     $('#curTemp').text((currentTemp) + '°F');
     $('#curHum').text((currentHum) + '%');
 
-    state = $('#stateSelect').val()
-    console.log(state)
-    localStorage.setItem('state',JSON.stringify(state))
+   
 });
 }
+
+function setState(){ 
+state = $('#stateSelect').val()
+console.log(state)
+localStorage.setItem('state',JSON.stringify(state))
+
 //pulls the gas price average needs to link to searchbtn press,
 var data = null;
 
@@ -57,16 +43,21 @@ xhr.withCredentials = false;
 
 xhr.addEventListener('readystatechange', function () {
   if (this.readyState === this.DONE) {
-    console.log(this.responseText);
+    // console.log(this.responseText);
+    responseText = this.responseText
+    responseText = JSON.parse(responseText);
+    console.log(responseText)
+    
   }
 });
 
-xhr.open("GET", `https://api.collectapi.com/gasPrice/stateUsaPrice?state=TN?`);
-xhr.setRequestHeader("content-type", "application/json");
+xhr.open("GET", `https://api.collectapi.com/gasPrice/stateUsaPrice?state=${state}`);
+xhr.setRequestHeader("content-type", JSON);
 xhr.setRequestHeader("authorization", "apikey 0k6jygK77f2YNTdDpR3Pe6:27QdslUJHymqqJ3vTKBtfC");
 
 xhr.send(data);
 
+}
 
 
 //trying to run gas api as fetch, xhr request are outdated
@@ -77,3 +68,4 @@ xhr.send(data);
 
 
 $("#searchBtn").on("click",saveCity)
+$("#searchBtn").on("click",setState)
