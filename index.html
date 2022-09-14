@@ -45,21 +45,39 @@
 
             </div>
             <div class="row" id="currentCityBox">
-                <div class="one-half column category" id="weather"> 
+                <div class="one-half column category" class="top-right" id="weather"> 
                         <h4>Weather:</h4>
+                        
                         <!--work on population after click changes look of page-->
+
                         <img class="u-max-full-width" id="weatherPhoto" src="./Images/field-stock.jpg">
                         <div class="top-right">
                             <p id="curTemp"></p>
                             <p id="curHum"></p>
                         </div>
+
+                    <img class="u-max-full-width" id="weatherPhoto" src="./Images/field-stock.jpg">
+                    <div class="top-right">
+                        <p id="demo"></p>
+                        <span id="curTemp"></span>
+                        <br>
+                        <span id="curHum"></span>
+                    </div>
+
                     <!-- <div id="moreInfo">More Info</div> -->
                 </div>
             
                 <div class="one-half column" id="gas"> 
+                
                     <h4>Average Gas $:</h4>
                     <img class="u-max-full-width" id="gasPhoto" src="./Images/gas-stock.jpg">
                     <div class="top-left"><span id="curPrice">$$</span></div>
+
+                        <h4>Average Gas $:</h4>
+                        <img class="u-max-full-width" id="gasPhoto" src="./Images/gas-stock.jpg">
+                            <div class="top-left"><span id="curPrice"></span>
+                            </div>
+                            
                 </div>
             </div>
                 <!-- future input for good local spots. restraunts,hotels maybe add other cool local things  -->
@@ -70,27 +88,30 @@
                 </div> -->
             <div class="row" id="fourDayBox">
                 <div class="twelve columns" id="fourDay">
-                    <div class="three columns" id="day1">
-                        <h5>Tomorrow</h5>
-                        <p>Temp:</p>
-                        <p>Chance of rain:</p>
+                    <div class="three columns" id="day-1">
+                        <h5><span class="name">Day 1</span> <span class="date">--/--</span></h5>
+                        <p id="dayHum"></p>
+                        <p id="dayMin"></p>
+                        <p id="dayMax"></p>
                     </div>
-                    <div class="three columns" id="day2">
-                        <h5>Tomorrow</h5>
-                        <p>Temp:</p>
-                        <p>Chance of rain:</p>
+                    <div class="three columns" id="day-2">
+                        <h5><span class="name">Day 2</span> <span class="text-muted date">--/--</span></h5>
+                        <p id="dayHum"></p>
+                        <p id="dayMin"></p>
+                        <p id="dayMax"></p>
 
                     </div>
-                    <div class="three columns" id="day3">
-                        <h5>Tomorrow</h5>
-                        <p>Temp:</p>
-                        <p>Chance of rain:</p>
-
+                    <div class="three columns" id="day-3">
+                        <h5><span class="name">Day 3</span> <span class="text-muted date">--/--</span></h5>
+                        <p id="dayHum"></p>
+                        <p id="dayMin"></p>
+                        <p id="dayMax"></p>
                     </div>
-                    <div class="three columns" id="day4">
-                        <h5>Tomorrow</h5>
-                        <p>Temp:</p>
-                        <p>Chance of rain:</p>
+                    <div class="three columns" id="day-4">
+                        <h5><span class="name">Day 4</span> <span class="text-muted date">--/--</span></h5>
+                        <p id="dayHum"></p>
+                        <p id="dayMin"></p>
+                        <p id="dayMax"></p>
 
                     </div>
                 </div>
