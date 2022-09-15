@@ -94,10 +94,10 @@ xhr.addEventListener('readystatechange', function () {
 
     
     //adds the prices to the pre set places on HTML
-    $('#gasPrice').text('State Avg Gas:$' + (gasPrice));
-    $('#midGrade').text('State Avg Mid:$' + (midGrade));
-    $('#premiumPrice').text('State Avg Premium:$' + (premium));
-    $('#dieselPrice').text('State Avg Diesel:$' + (diesel));
+    $('#gasPrice').text('Average Gas: $' + (gasPrice));
+    $('#midGrade').text('Average Mid: $' + (midGrade));
+    $('#premiumPrice').text('Average Premium: $' + (premium));
+    $('#dieselPrice').text('Average Diesel: $' + (diesel));
   }
 });
 //API request
