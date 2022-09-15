@@ -95,7 +95,17 @@ li {
 
   #list {
     display: block;
+    color: black;
   }
+
+  a {
+    text-decoration: none;
+  }
+
+  /* a:link {
+    color: black;
+
+  } */
 
  #gasPrice, #midGrade, #premiumPrice, #dieselPrice, #curTemp, #curHum{
   font-size: 25px;
