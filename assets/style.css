@@ -135,7 +135,7 @@ li {
 
   /* 800px cut off for text over images to scale down and fit to page should be only media  */
 
-  /* @media (max-width: 420px) { 
+  @media (max-width: 420px) { 
     body{
       background-color: var(--main2);
       font-family: 'Poppins';
@@ -150,16 +150,14 @@ li {
     .top-right {
       position: absolute;
       top: 36%;
-      right: 39%;
-      color: white;
-      font-size: 7vw;
+      right: 45%;
+      font-size: 10vw;
     }
 
     .top-left {
       position: absolute;
-      top: 62%;
-      left: 68%;
-      color: white;
+      top: 60%;
+      left: 8%;
       font-size: 8vw;
     }
     
@@ -178,10 +176,14 @@ li {
     margin-top: 5px; 
     overflow: auto;
   }
+
+  #day-1, #day-2, #day-3, #day-4 {
+    margin-bottom: 15px;
+  }
     
   } 
 
-  @media (min-width: 640px) { 
+  @media (min-width: 640px) and (max-width: 760px) { 
     body{
       background-color: var(--main2);
       font-family: 'Poppins';
@@ -195,24 +197,22 @@ li {
 
     .top-right {
       position: absolute;
-      top: 25%;
-      right: 75%;
-      color: white;
-      font-size: 3vw;
+      top: 48%;
+      right: 67%;
+      font-size: 4vw;
     }
 
     .top-left {
       position: absolute;
-      top: 65%;
-      left: 75%;
-      color: white;
-      font-size: 6vw;
+      top: 41%;
+      left: 53%;
+      font-size: 2vw;
     }
     
 
   }
 
-  @media (min-width: 764px) {
+  @media (min-width: 764px) and (max-width: 900px) {
     body{
       background-color: var(--main2);
       font-family: 'Poppins';
@@ -222,17 +222,15 @@ li {
       position: absolute;
       top: 46%;
       right: 71%;
-      color: white;
       font-size: 3vw;
     }
 
     .top-left {
       position: absolute;
-       top: 45%;
-      left: 80%;
-      color: white;
-      font-size: 5vw;
+      top: 40%;
+      left: 54%;
+      font-size: 3vw;
     }
     
 
-  } */
+  } 

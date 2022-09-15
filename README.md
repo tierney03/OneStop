@@ -9,8 +9,16 @@
 
 ## Webpage
 
-![OneStop home page](./Images/page1.PNG)
-![Second page](./Images/page2.PNG)
+![OneStop home page](./Images/updatedPage1.png)
+![Second page](./Images/updated_page2.png)
+
+# iPad and tablet 
+![iPad version](./Images/onestopIpad2update.png)
+
+# Cellphone
+
+![iPhone version](./Images/updatesOnestopSS.png)
+
 
 ## URL for website
 
