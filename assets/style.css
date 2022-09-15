@@ -7,7 +7,6 @@
 body{
   background-color: var(--main2);
   font-family: 'Poppins';
-  /* font-size: 22px; */
 }
 
 #intro p{
@@ -35,7 +34,6 @@ li {
 
   #weather, #gas {
     font-weight: bold;
-    /* font-size: 15px; */
     margin-top: 1em;
   }
  
@@ -43,11 +41,13 @@ li {
   #weatherPhoto{
     border-radius: 5px;
     opacity: 60%;
+    box-shadow: 9px 9px 9px black ;
   }
 
   #gasPhoto{
     border-radius: 5px;
     opacity: 60%;
+    box-shadow: 9px 9px 9px black ;
   }
 
   .u-max-full-width {
@@ -62,11 +62,12 @@ li {
   }
 
   #day-1, #day-2, #day-3, #day-4 {
-    border: black solid 2px;
+    /* border: black solid 2px; */
     border-radius: 7px;
     background-color: var(--main1);
     padding: 4px;
     overflow: auto;
+    box-shadow: 9px 9px 9px gray;
   }
   
   #moreInfo {
@@ -74,34 +75,39 @@ li {
   }
 
   #aboutUs2, #comingFeatures2, #info2, #resources2 {
-    border: black solid 2px;
+    /* border: black solid 2px; */
     background-color: var(--main1);
     border-radius: 7px;
     height: 200px;
     padding: 10px;
-    margin-top: 5px;
+    margin-top: 25px;
     overflow: auto;
+    box-shadow: 9px 9px 9px gray;
   }
 
   #list {
     display: block;
   }
 
+ #gasPrice, #midGrade, #premiumPrice, #dieselPrice, #curTemp, #curHum{
+  font-size: 25px;
+  color: black;
+ }
+
   
 .top-right {
   position: absolute;
   top: 45%;
-  bottom: 35%;
-  right: 75%;
+  bottom: 25%;
+  right: 80%;
   color: white;
-  font-size: 20px;
 }
 
 .top-left {
   position: absolute;
   top: 45%;
   bottom: 25%;
-  left: 65%;
+  left: 55%;
   color: white;
   font-size: 30px;
 }
@@ -126,8 +132,10 @@ li {
   }
 
   /* -------------- Responsive ---------------- */
-/* 
-  @media (max-width: 420px) { 
+
+  /* 800px cut off for text over images to scale down and fit to page should be only media  */
+
+  /* @media (max-width: 420px) { 
     body{
       background-color: var(--main2);
       font-family: 'Poppins';
@@ -145,29 +153,29 @@ li {
       right: 39%;
       color: white;
       font-size: 7vw;
-    } */
+    }
 
-    /* .top-left {
+    .top-left {
       position: absolute;
       top: 62%;
       left: 68%;
       color: white;
       font-size: 8vw;
-    } */
+    }
     
-    /* .respoPage2 {
+    .respoPage2 {
       display:inline;
       text-decoration: none;
       font-size: 1vw;
-    } */
+    }
 
-    /* #aboutUs2, #comingFeatures2, #info2, #resources2 {
+    #aboutUs2, #comingFeatures2, #info2, #resources2 {
     border: black solid 2px;
     background-color: var(--main1);
     border-radius: 7px;
     height: 200px;
-    padding: 0px; */
-    /* margin-top: 5px; 
+    padding: 0px;
+    margin-top: 5px; 
     overflow: auto;
   }
     
@@ -194,8 +202,8 @@ li {
     }
 
     .top-left {
-      /* position: absolute; */
-      /* top: 65%;
+      position: absolute;
+      top: 65%;
       left: 75%;
       color: white;
       font-size: 6vw;
@@ -218,9 +226,9 @@ li {
       font-size: 3vw;
     }
 
-    .top-left { */
-      /* position: absolute; */
-      /* top: 45%;
+    .top-left {
+      position: absolute;
+       top: 45%;
       left: 80%;
       color: white;
       font-size: 5vw;
