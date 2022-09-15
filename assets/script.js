@@ -87,6 +87,10 @@ xhr.addEventListener('readystatechange', function () {
     premium = responseText['result']['state']['premium']
     diesel = responseText['result']['state']['diesel']
 
+    gasPrice = gasPrice.slice(0, gasPrice.length - 1);
+    midGrade = midGrade.slice(0, midGrade.length - 1);
+    premium = premium.slice(0, premium.length - 1);
+    diesel = diesel.slice(0, diesel.length - 1);
     // console.log(gasPrice)
     // console.log(midGrade)
     // console.log(premium)
