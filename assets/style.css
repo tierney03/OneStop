@@ -59,9 +59,17 @@ li {
   #fourDay {
     margin-top:10px;
     height: 200px;
+    margin-bottom: 20px;
   }
 
-  #day-1, #day-2, #day-3, #day-4 {
+  #hotel {
+    margin-top:10px;
+    height: 30px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #day-1, #day-2, #day-3, #day-4, #hotel {
     /* border: black solid 2px; */
     border-radius: 7px;
     background-color: var(--main1);
@@ -99,13 +107,13 @@ li {
   position: absolute;
   top: 45%;
   bottom: 25%;
-  right: 80%;
+  right: 76%;
   color: white;
 }
 
 .top-left {
   position: absolute;
-  top: 45%;
+  top: 36%;
   bottom: 25%;
   left: 55%;
   color: white;

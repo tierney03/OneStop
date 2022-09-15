@@ -55,9 +55,9 @@ function saveCity(){
          futMax = Math.trunc(futMax)
 //displaying the future weather
          $('#date'+index).text(date);
-         $('#dayMin'+index).text('Min:'+ " " + (futMin) + '°F');
-         $('#dayMax'+index).text('Max:'+ " " + (futMax) + '°F');
-         $('#dayHum'+index).text('hum:'+ " " + (futHum) + '%');
+         $('#dayMin'+index).text('Daily Min:'+ " " + (futMin) + '°F');
+         $('#dayMax'+index).text('Daily Max:'+ " " + (futMax) + '°F');
+         $('#dayHum'+index).text('Humity:'+ " " + (futHum) + '%');
          index++
      }
     })
@@ -127,7 +127,7 @@ fetch(`https://hotels4.p.rapidapi.com/locations/v2/search?query=${around}&locale
     hotel = response['suggestions'][1]['entities']['0']['name']
     console.log(hotel)
 
-    $('#hotelTest').text("Hotel:" + (hotel))
+    $('#hotelTest').text(" Top Hotel: " + (hotel))
   
   })
 }
