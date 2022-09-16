@@ -67,6 +67,7 @@ li {
     height: 30px;
     width: 100%;
     margin-bottom: 10px;
+    padding: 5px;
   }
 
   #day-1, #day-2, #day-3, #day-4, #hotel {
