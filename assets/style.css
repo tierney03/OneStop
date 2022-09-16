@@ -110,7 +110,7 @@ li {
  #gasPrice, #midGrade, #premiumPrice, #dieselPrice, #curTemp, #curHum{
   font-size: 25px;
   color: black;
- }
+}
 
   
 .top-right {
@@ -174,7 +174,7 @@ li {
 
     .top-left {
       position: absolute;
-      top: 60%;
+      top: 58%;
       left: 8%;
       font-size: 8vw;
     }
