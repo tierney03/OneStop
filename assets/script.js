@@ -1,4 +1,6 @@
 //making the variables for api look up
+var pastGas = []
+var pastState = []
 var pastCity = []
 var city = ""
 var key = "104b3d87a3f27b63c86227e77149ab4c"
@@ -31,7 +33,7 @@ function saveCity(){
     currentTemp = Math.trunc(currentTemp);
     currentHum = Math.trunc(currentHum);
     
-
+    $('#pastSearch').append(city + " ")
     //adding the temp and hum to display on HTML
     $('#curTemp').text('Temp: ' + (currentTemp) + '°F');
     $('#curHum').text('Humidity: ' +(currentHum) + '%');
@@ -74,8 +76,9 @@ function saveCity(){
  //sets the state to pull the average gas prices
 function setState(){ 
 state = $('#stateSelect').val()
+pastState.push(state)
 console.log(state)
-localStorage.setItem('state',JSON.stringify(state))
+localStorage.setItem('state',JSON.stringify(pastState))
 
 //pulls the gas price average needs to link to searchbtn press,
 var data = null;
@@ -87,7 +90,6 @@ xhr.addEventListener('readystatechange', function () {
   if (this.readyState === this.DONE) {
     responseText = this.responseText
     responseText = JSON.parse(responseText);
-    // console.log(responseText)
     //runs through the api to pull the prices for fuel types
     gasPrice = responseText['result']['state']['gasoline']
     midGrade = responseText['result']['state']['midGrade']
@@ -98,17 +100,17 @@ xhr.addEventListener('readystatechange', function () {
     midGrade = midGrade.slice(0, midGrade.length - 1);
     premium = premium.slice(0, premium.length - 1);
     diesel = diesel.slice(0, diesel.length - 1);
-    // console.log(gasPrice)
-    // console.log(midGrade)
-    // console.log(premium)
-    // console.log(diesel)
 
-    
     //adds the prices to the pre set places on HTML
+    $('#pastSearch').append(state + "-" + gasPrice + `<br>`)
     $('#gasPrice').text('Average Gas: $' + (gasPrice));
     $('#midGrade').text('Average Mid: $' + (midGrade));
     $('#premiumPrice').text('Average Premium: $' + (premium));
     $('#dieselPrice').text('Average Diesel: $' + (diesel));
+
+    pastGas.push(gasPrice)
+    localStorage.setItem('pastGas',JSON.stringify(pastGas))
+
   }
 });
 //API request
@@ -142,24 +144,19 @@ fetch(`https://hotels4.p.rapidapi.com/locations/v2/search?query=${around}&locale
   
   })
 }
-// the want to be end all be all travel API currently pulling no data at all needs work, can def delete
-// function travelPlaces(){
-//   const options = {
-// 	method: 'POST',
-// 	headers: {
-// 		'X-RapidAPI-Key': '3d1c2d7f67mshddf82a9182fa081p19577ajsn1520b3beb5fa',
-// 		'X-RapidAPI-Host': 'travel-places.p.rapidapi.com'
-// 	}
-// };
 
-// fetch('https://travel-places.p.rapidapi.com/', options)
-// 	.then(response => response.json())
-// 	.then(response => console.log(response))
-// 	.catch(err => console.error(err));
+function clearHistory(event){
+  pastCity=[];
+  state = [];
+  pastGas = [];
+  localStorage.removeItem("pastCity");
+  localStorage.removeItem("state");
+  localStorage.removeItem("pastGas");
+  document.location.reload();
+}
 
-// }
 
-// $('#searchBtn').on("click",travelPlaces)
+$("#clearSearch").on("click",clearHistory);
 $('#searchBtn').on("click",hotelCity)
 $("#searchBtn").on("click",saveCity)
 $("#searchBtn").on("click",setState)
