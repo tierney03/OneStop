@@ -47,12 +47,19 @@ function saveCity(){
          var futHum = forecast.main.humidity
          var futMin = forecast.main.temp_min
          var futMax = forecast.main.temp_max
+         var icon = forecast.weather[0].icon
 // convert the temp, remove decimal from wind and temp
          futMin = ((futMin-273.15)*1.8)+32;
          futMin = Math.trunc(futMin)
 
          futMax = ((futMax-273.15)*1.8)+32;
          futMax = Math.trunc(futMax)
+
+         $("#img"+index).attr(
+          "src",
+          " http://openweathermap.org/img/wn/" + icon +"@2x.png"
+          
+         );
 //displaying the future weather
          $('#date'+index).text(date);
          $('#dayMin'+index).text('Daily Min:'+ " " + (futMin) + '°F');
