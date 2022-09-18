@@ -21,7 +21,7 @@ function saveCity(){
     //calling the API and what data to input 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`)
     .then((response) => response.json())
-    .then((data) => {console.log(data)
+    .then((data) => {
    //pulling selected data
     currentTemp = data['main']['temp']
     currentHum = data['main']['humidity']
@@ -40,7 +40,7 @@ function saveCity(){
 
     fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${currentLat}&lon=${currentLon}&appid=${key}&exclude=minutely,hourly`)
     .then(response => response.json())
-    .then(data =>{ console.log(data)
+    .then(data =>{ 
       var index = 0;
 // forecast loop pulling next 5 days and display upcoming weather and 
       for(let i = 6; i < 40; i+=7) {
@@ -77,7 +77,6 @@ function saveCity(){
 function setState(){ 
 state = $('#stateSelect').val()
 pastState.push(state)
-console.log(state)
 localStorage.setItem('state',JSON.stringify(pastState))
 
 //pulls the gas price average needs to link to searchbtn press,
@@ -121,29 +120,6 @@ xhr.setRequestHeader("authorization", "apikey 0k6jygK77f2YNTdDpR3Pe6:27QdslUJHym
 xhr.send(data);
 
 }
-//Hotel API shows hotels and surronding attractions
-function hotelCity(){
-
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '3d1c2d7f67mshddf82a9182fa081p19577ajsn1520b3beb5fa',
-		'X-RapidAPI-Host': 'hotels4.p.rapidapi.com'
-	}
-};
-around = $("#cityInput").val().trim()
-fetch(`https://hotels4.p.rapidapi.com/locations/v2/search?query=${around}&locale=en_US&currency=USD`, options)
-	.then(response => response.json())
-	 .then(response => { 
-
-    console.log(response)
-    hotel = response['suggestions'][1]['entities']['0']['name']
-    console.log(hotel)
-
-    $('#hotelTest').text(" Top Hotel: " + (hotel))
-  
-  })
-}
 
 function clearHistory(event){
   pastCity=[];
@@ -157,6 +133,5 @@ function clearHistory(event){
 
 
 $("#clearSearch").on("click",clearHistory);
-$('#searchBtn').on("click",hotelCity)
 $("#searchBtn").on("click",saveCity)
 $("#searchBtn").on("click",setState)
