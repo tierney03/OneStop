@@ -102,7 +102,7 @@ xhr.addEventListener('readystatechange', function () {
     diesel = diesel.slice(0, diesel.length - 1);
 
     //adds the prices to the pre set places on HTML
-    $('#pastSearch').append(state + "-" + gasPrice + `<br>`)
+    $('#pastSearch').append(", " + state + "- $" + gasPrice + `<br>`)
     $('#gasPrice').text('Average Gas: $' + (gasPrice));
     $('#midGrade').text('Average Mid: $' + (midGrade));
     $('#premiumPrice').text('Average Premium: $' + (premium));

@@ -82,6 +82,14 @@ li {
   #moreInfo {
     float: right;
   }
+  #past {
+    width: 100%;
+    margin-bottom: 30px;
+    padding-top: 55px;
+    margin-top:  15px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
 
   #aboutUs2, #comingFeatures2, #info2, #resources2 {
     /* border: black solid 2px; */
@@ -116,7 +124,7 @@ li {
   
 .top-right {
   position: absolute;
-  top: 45%;
+  top: 35%;
   bottom: 25%;
   right: 76%;
   color: white;
@@ -124,7 +132,7 @@ li {
 
 .top-left {
   position: absolute;
-  top: 36%;
+  top: 26%;
   bottom: 25%;
   left: 55%;
   color: white;
@@ -132,18 +140,22 @@ li {
 }
 
 /* -------------- Hover Effects ---------------- */
+ /* -------------- Hover Effects ---------------- */
+#aboutUs, #comingFeatures, #info, #resources, #home {
+  color: rgb(25, 96, 120);
+}
   #aboutUs:hover, #comingFeatures:hover, #info:hover, #resources:hover, #home:hover {
     color: var(--main3);
     
   }
 
-  #searchBtn {
+  #searchBtn, #clearSearch{
     
     box-shadow: inset 0 0 0 0 var(--main3);
     transition: ease-out .4s;
   }
 
-  #searchBtn:hover {
+  #searchBtn:hover, #clearSearch:hover {
     box-shadow: inset 300px 0 0 0 var(--main3);
     color: whitesmoke;
     border: 2px solid var(--main3);
@@ -199,8 +211,14 @@ li {
   #day-1, #day-2, #day-3, #day-4 {
     margin-bottom: 15px;
   }
-    
-  } 
+  #past {
+    width: 100%;
+    margin-bottom: 30px;
+    padding-top: 55px;
+    margin-top:  15px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
 
   @media (min-width: 640px) and (max-width: 760px) { 
     body{
