@@ -240,14 +240,14 @@ li {
 
     .top-right {
       position: absolute;
-      top: 46%;
-      right: 69%;
-      font-size: 3vw;
+      top: 31%;
+      right: 70%;
+      font-size: 4vw;
     }
 
     .top-left {
       position: absolute;
-      top: 40%;
+      top: 26%;
       left: 54%;
       font-size: 3vw;
     }
