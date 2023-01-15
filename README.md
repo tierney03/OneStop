@@ -4,7 +4,6 @@
 
 ## About the code
 <br>
-<p>needs more descprion when page is complete</p>
 <p>User is presented with a input HTML element and drop down selector, after the search button is clicked the javascript function with begin to run. The function will pull the input data and save them to the local stoage after being set to pre declaired variable, putting the user input into the API's to pull the current and future weather, the average gas price. Soon coming feature is to also see local hotels and restraunts.</p>
 
 ## Webpage
